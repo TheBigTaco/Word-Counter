@@ -12,5 +12,11 @@ namespace WordCount.Controllers
       {
         return View();
       }
+      [HttpPost("/result")]
+      public ActionResult Result()
+      {
+        int result = RepeatCounter.CountRepeats(Request.Form["sentence"], Request.Form["word"]);
+        return View(result);
+      }
     }
 }

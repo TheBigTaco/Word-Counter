@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Rename.Models;
+using WordCount.Models;
 
-namespace Rename.Tests
+namespace WordCount.Tests
 {
   [TestClass]
-  public class RenameTest
+  public class CounterTest
   {
     [TestMethod]
     public void Method_Description_ExpectedValue()

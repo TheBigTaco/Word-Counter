@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Rename.Models
+namespace WordCount.Models
 {
-  public class Rename
+  public class Counter
   {
 
   }

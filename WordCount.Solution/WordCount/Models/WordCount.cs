@@ -6,9 +6,19 @@ namespace WordCount.Models
 {
   public class RepeatCounter
   {
-    public static string CountRepeats(string sentence, string word)
+    private static char[] _splitters = {' ', ',','.','?','/','!','-','$','%','@'};
+    public static int CountRepeats(string sentence, string word)
     {
-      return 1;
+      int counter = 0;
+      string[] stringArray = sentence.Split(_splitters);
+      foreach(string check in stringArray)
+      {
+        if(check == word)
+        {
+          counter++;
+        }
+      }
+      return counter;
     }
   }
 }

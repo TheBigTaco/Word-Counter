@@ -10,9 +10,28 @@ namespace WordCount.Tests
   public class RepeatCounterTest
   {
     [TestMethod]
-    public void CountRepeats_CountAmountWordRepeats_Int()
+    public void CountRepeats_CountSingleWordRepeats_Int()
     {
-      Assert.AreEqual(1, RepeatCounter.CountRepeats("hello", "hello"));
+      string sentence = "hello";
+      string word = "hello";
+      int expectedReturn = 1;
+      Assert.AreEqual(expectedReturn, RepeatCounter.CountRepeats(sentence, word));
+    }
+    [TestMethod]
+    public void CountRepeats_CountMultiWordRepeats_Int()
+    {
+      string sentence = "hello hi hows it going hello";
+      string word = "hello";
+      int expectedReturn = 2;
+      Assert.AreEqual(expectedReturn, RepeatCounter.CountRepeats(sentence, word));
+    }
+    [TestMethod]
+    public void CountRepeats_CountMultiWordWithPunctuationRepeats_Int()
+    {
+      string sentence = "hello, hi. How's it going!?hello... hello %hello$hello@hello";
+      string word = "hello";
+      int expectedReturn = 6;
+      Assert.AreEqual(expectedReturn, RepeatCounter.CountRepeats(sentence, word));
     }
   }
 }

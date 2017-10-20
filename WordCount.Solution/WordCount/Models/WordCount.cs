@@ -4,8 +4,11 @@ using System.Text.RegularExpressions;
 
 namespace WordCount.Models
 {
-  public class Counter
+  public class RepeatCounter
   {
-
+    public static string CountRepeats(string sentence, string word)
+    {
+      return 1;
+    }
   }
 }

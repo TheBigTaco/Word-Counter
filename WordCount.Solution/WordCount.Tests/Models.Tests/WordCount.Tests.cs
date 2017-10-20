@@ -7,12 +7,12 @@ using WordCount.Models;
 namespace WordCount.Tests
 {
   [TestClass]
-  public class CounterTest
+  public class RepeatCounterTest
   {
     [TestMethod]
-    public void Method_Description_ExpectedValue()
+    public void CountRepeats_CountAmountWordRepeats_Int()
     {
-      Assert.AreEqual(var1, method(input));
+      Assert.AreEqual(1, RepeatCounter.CountRepeats("hello", "hello"));
     }
   }
 }

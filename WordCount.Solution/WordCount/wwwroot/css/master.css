@@ -1,3 +1,16 @@
 body {
-  font-family: sans-serif;
+  font-family: monospace;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+html {
+  background: lightgrey;
+}
+
+label {
+  font-weight: bold;
+  color: black;
 }
